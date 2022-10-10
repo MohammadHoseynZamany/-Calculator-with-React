@@ -1,0 +1,55 @@
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 4px;
+}
+
+.number-oprations-container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.numbers-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.zero-point-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.equal-container {
+    display: grid;
+    grid-template-columns:1fr;
+}
+
+.numbers-container > div {
+    background-color: rgb(206, 206, 206);
+    border-radius: 6px;
+    text-align: center;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding-top:10px;
+    padding-bottom: 10px;
+}
+
+.oprations-container > div {
+    background-color: rgb(240,165,85);
+    border-radius: 6px;
+    text-align: center;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding-top:10px;
+    padding-bottom: 10px;
+}
+
+.equal-container > div {
+    background-color: rgb(57, 155, 18);
+    text-align: center;
+    border-radius: 6px;
+    font-size: 50px;
+}
