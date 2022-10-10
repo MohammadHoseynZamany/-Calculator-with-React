@@ -4,7 +4,7 @@ import "../styles/Monitor.css"
 export default function(){
     return(
     <div className="main-container">
-        <p id="show-monitor">654968</p>
+        <p id="show-monitor">6549689</p>
     </div>
     )
 }
