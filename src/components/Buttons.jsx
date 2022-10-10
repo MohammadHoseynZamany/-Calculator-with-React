@@ -23,7 +23,10 @@ export default function Buttons(){
                 <div id="minus">&#8722;</div>
                 <div id="plus">&#43;</div>
             </div>
-            <div className="equal-container"></div>
+            <div className="equal-del-container">
+                <div id="equal">&#61;</div>
+                <div id="del">&#8592;</div>
+            </div>
         </div>
     )
 }
