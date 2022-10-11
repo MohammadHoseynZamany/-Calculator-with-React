@@ -12,7 +12,7 @@ export default Oprations = {
     "pushNumber": function (number){
         this.stack.push(number);
         this.toShow();
-        console.log(this.showMonitor)
+        // alert('he')
     },
     "pushOpration":function (opration){
         pass
