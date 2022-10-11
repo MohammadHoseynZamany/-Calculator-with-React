@@ -7,28 +7,28 @@ export default function Buttons(){
         <div className="buttons-container">
             <div className="number-oprations-container">
                 <div className="numbers-container">
-                    <div id="number-seven" onClick={Oprations.pushNumber(7)}>7</div>
-                    <div id="number-eight">8</div>
-                    <div id="number-nine">9</div>
-                    <div id="number-four">4</div>
-                    <div id="number-five">5</div>
-                    <div id="number-six">6</div>
-                    <div id="number-one">1</div>
-                    <div id="number-two">2</div>
-                    <div id="number-three">3</div>
-                    <div id="number-zero">0</div>
-                    <div id="point">.</div>
-                    <div id="del">&#8592;</div>
+                    <button id="number-seven" onClick={Oprations.pushNumber(7)}>7</button>
+                    <button id="number-eight" onClick={Oprations.pushNumber(8)}>8</button>
+                    <button id="number-nine" onClick={Oprations.pushNumber(9)}>9</button>
+                    <button id="number-four" onClick={Oprations.pushNumber(4)}>4</button>
+                    <button id="number-five" onClick={Oprations.pushNumber(5)}>5</button>
+                    <button id="number-six" onClick={Oprations.pushNumber(6)}>6</button>
+                    <button id="number-one" onClick={Oprations.pushNumber(1)}>1</button>
+                    <button id="number-two" onClick={Oprations.pushNumber(2)}>2</button>
+                    <button id="number-three" onClick={Oprations.pushNumber(3)}>3</button>
+                    <button id="number-zero" onClick={Oprations.pushNumber(0)}>0</button>
+                    <button id="point">.</button>
+                    <button id="del">&#8592;</button>
                 </div>
                 <div className="oprations-container">
-                    <div id="division">&#247;</div>
-                    <div id="multiplicaton">&#215;</div>
-                    <div id="minus">&#8722;</div>
-                    <div id="plus">&#43;</div>
+                    <button id="division">&#247;</button>
+                    <button id="multiplicaton">&#215;</button>
+                    <button id="minus">&#8722;</button>
+                    <button id="plus">&#43;</button>
                 </div>
             </div>
                 <div className="equal-container">
-                    <div id="equal">&#61;</div>
+                    <button id="equal">&#61;</button>
                 </div>
         </div>
     )
