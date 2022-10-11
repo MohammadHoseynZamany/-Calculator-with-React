@@ -1,4 +1,5 @@
 import React from "react"
+import Oprations from "./Oprations"
 import "../styles/Buttons.css"
 
 export default function Buttons(){
@@ -6,7 +7,7 @@ export default function Buttons(){
         <div className="buttons-container">
             <div className="number-oprations-container">
                 <div className="numbers-container">
-                    <div id="number-seven">7</div>
+                    <div id="number-seven" onClick={Oprations.pushNumber(7)}>7</div>
                     <div id="number-eight">8</div>
                     <div id="number-nine">9</div>
                     <div id="number-four">4</div>

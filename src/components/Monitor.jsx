@@ -1,10 +1,11 @@
 import React from "react"
+import Oprations from "./Oprations"
 import "../styles/Monitor.css"
 
 export default function(){
     return(
     <div className="main-container">
-        <p id="show-monitor">6549689</p>
+        <p id="show-monitor">{Oprations.showMonitor}</p>
     </div>
     )
 }
