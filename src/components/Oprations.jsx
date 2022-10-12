@@ -1,22 +1,24 @@
 var stack = [];
 
-function PushNumber(number){
-    if (typeof stack[length -1] == 'number'){
-        stack.push(number);
-    } else {
+export function PushNumber(number){
+    if (typeof stack[stack.length -1] == 'number'){
         alert('Input opration between numbers !!!');
+    } else {
+        stack.push(number);
+        ShowMonitor(number);
     }
 }
 
-function PushOpration(opration){
-    if (typeof stack[length -1] == 'string'){
+export function PushOpration(opration){
+    if (typeof stack[stack.length - 1] == 'number'){
         stack.push(opration);
+        ShowMonitor(opration);
     } else {
         alert('First input Operand !!!')
     }
 }
 
-function compute(){
+export function Compute(){
     let answer = 0;
     let popStack = stack.pop();
     if (typeof popStack == 'number'){
@@ -36,4 +38,15 @@ function compute(){
     } else {
         alert('input latest operand !!!');
     }
+
+    ShowMonitor(answer);
+}
+
+export default function ShowMonitor(str){
+    document.getElementById('show-monitor').innerHTML = str
+}
+
+export function Del(){
+    stack.pop()
+    ShowMonitor('')
 }
