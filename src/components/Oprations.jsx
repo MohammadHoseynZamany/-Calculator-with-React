@@ -1,18 +1,22 @@
-var stack = [];
+let stack = [];
+let mainNumber = new String();
+let showOpration = new String();
 
 export function PushNumber(number){
     if (typeof stack[stack.length -1] == 'number'){
         alert('Input opration between numbers !!!');
     } else {
         stack.push(number);
-        ShowMonitor(number);
+        showOpration += number.toString();
+        ShowMonitor(showOpration);
     }
 }
 
 export function PushOpration(opration){
     if (typeof stack[stack.length - 1] == 'number'){
         stack.push(opration);
-        ShowMonitor(opration);
+        showOpration += ` ${opration} `
+        ShowMonitor(showOpration);
     } else {
         alert('First input Operand !!!')
     }
@@ -25,7 +29,7 @@ export function Compute(){
         let opration = stack.pop()
         let firstOpe = stack.pop()
         if (opration == '+'){
-            answer += popStack + firstOpe;
+            answer += popStack + firstOpe;           
         } else if (opration == '-'){
             answer += firstOpe - popStack 
         } else if (opration == '*'){
@@ -40,6 +44,7 @@ export function Compute(){
     }
 
     ShowMonitor(answer);
+    showOpration = answer;
 }
 
 export default function ShowMonitor(str){
