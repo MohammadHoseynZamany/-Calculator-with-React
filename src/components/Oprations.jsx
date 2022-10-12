@@ -3,12 +3,16 @@ let mainNumber = new String();
 let showOpration = new String();
 
 export function PushNumber(number){
-    if (typeof stack[stack.length -1] == 'number'){
-        alert('Input opration between numbers !!!');
+    if (stack.length < 4){
+        if (typeof stack[stack.length -1] == 'number'){
+            alert('Input opration between numbers !!!');
+        } else {
+            stack.push(number);
+            showOpration += number.toString();
+            ShowMonitor(showOpration);
+        }
     } else {
-        stack.push(number);
-        showOpration += number.toString();
-        ShowMonitor(showOpration);
+        Compute();
     }
 }
 
@@ -44,7 +48,8 @@ export function Compute(){
     }
 
     ShowMonitor(answer);
-    showOpration = answer;
+    showOpration = answer.toString();
+    stack.push(answer);
 }
 
 export default function ShowMonitor(str){
@@ -52,6 +57,6 @@ export default function ShowMonitor(str){
 }
 
 export function Del(){
-    stack.pop()
-    ShowMonitor('')
+    stack = []
+    ShowMonitor('0')
 }

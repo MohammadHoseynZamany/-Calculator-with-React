@@ -57,3 +57,15 @@
     border-radius: 6px;
     font-size: 50px;
 }
+
+.numbers-container > button:active {
+    background-color: rgb(244, 219, 219);
+}
+
+.oprations-container > button:active {
+    background-color: rgb(236, 130, 15);
+}
+
+.equal-container > button:active {
+    background-color: rgb(37, 126, 2);
+}
