@@ -1,5 +1,5 @@
 let stack = [];
-let mainNumber = new String();
+let mainNumber = '';
 let showOpration = new String();
 
 export function PushNumber(number){
@@ -7,7 +7,7 @@ export function PushNumber(number){
         if (typeof stack[stack.length -1] == 'number'){
             alert('Input opration between numbers !!!');
         } else {
-            stack.push(number);
+            mainNumber += number.toString();
             showOpration += number.toString();
             ShowMonitor(showOpration);
         }
@@ -17,6 +17,7 @@ export function PushNumber(number){
 }
 
 export function PushOpration(opration){
+    PushNumberTStack();
     if (typeof stack[stack.length - 1] == 'number'){
         stack.push(opration);
         showOpration += ` ${opration} `
@@ -27,13 +28,14 @@ export function PushOpration(opration){
 }
 
 export function Compute(){
+    PushNumberTStack();
     let answer = 0;
     let popStack = stack.pop();
     if (typeof popStack == 'number'){
         let opration = stack.pop()
         let firstOpe = stack.pop()
         if (opration == '+'){
-            answer += popStack + firstOpe;           
+            answer += popStack + firstOpe;
         } else if (opration == '-'){
             answer += firstOpe - popStack 
         } else if (opration == '*'){
@@ -46,9 +48,10 @@ export function Compute(){
     } else {
         alert('input latest operand !!!');
     }
-
+    stack = []
     ShowMonitor(answer);
-    showOpration = answer.toString();
+    showOpration = ''
+    // showOpration = answer.toString();
     stack.push(answer);
 }
 
@@ -59,4 +62,11 @@ export default function ShowMonitor(str){
 export function Del(){
     stack = []
     ShowMonitor('0')
+    showOpration = ''
+}
+
+function PushNumberTStack(){
+    if (mainNumber != ''){
+        stack.push(Number(mainNumber));
+    }
 }
