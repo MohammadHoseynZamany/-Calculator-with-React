@@ -1,6 +1,6 @@
 import React from "react"
 import ReactDOM from "react-dom/client"
-import {Compute, PushOpration, PushNumber, Del} from "./Oprations"
+import {Compute, PushOpration, PushNumber, PushPoint, Del} from "./Oprations"
 import "../styles/Buttons.css"
 
 export default function Buttons(){
@@ -18,8 +18,8 @@ export default function Buttons(){
                     <button id="number-two" onClick={function(){PushNumber(2)}}>2</button>
                     <button id="number-three" onClick={function(){PushNumber(3)}}>3</button>
                     <button id="number-zero" onClick={function(){PushNumber(0)}}>0</button>
-                    <button id="point">.</button>
-                    <button id="del" onClick={function(){Del()}}>&#8592;</button>
+                    <button id="point" onClick={function(){PushPoint()}}>.</button>
+                    <button id="del" onClick={function(){Del()}}>Reset</button>
                 </div>
                 <div className="oprations-container">
                     <button id="division" onClick={function(){PushOpration('/')}}>&#247;</button>
