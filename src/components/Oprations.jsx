@@ -12,8 +12,6 @@ export function PushNumber(number){
             showOpration += number.toString();
             ShowMonitor(showOpration);
         }
-    } else {
-        Compute();
     }
 }
 
