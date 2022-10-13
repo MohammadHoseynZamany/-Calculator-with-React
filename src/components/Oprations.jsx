@@ -2,6 +2,7 @@ let stack = [];
 let mainNumber = '';
 let showOpration = new String();
 
+
 export function PushNumber(number){
     if (stack.length < 4){
         if (typeof stack[stack.length -1] == 'number'){
@@ -22,12 +23,15 @@ export function PushOpration(opration){
         stack.push(opration);
         showOpration += ` ${opration} `
         ShowMonitor(showOpration);
+        mainNumber = ''
     } else {
         alert('First input Operand !!!')
     }
 }
 
 export function Compute(){
+debugger;
+
     PushNumberTStack();
     let answer = 0;
     let popStack = stack.pop();
@@ -51,8 +55,9 @@ export function Compute(){
     stack = []
     ShowMonitor(answer);
     showOpration = ''
-    // showOpration = answer.toString();
-    stack.push(answer);
+    showOpration = answer.toString();
+    mainNumber = answer.toString();
+    PushNumberTStack()
 }
 
 export default function ShowMonitor(str){
